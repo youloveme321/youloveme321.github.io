@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do You Love Me ?</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="heart.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <div class="imgContainer">
+            <img id="img1" src="1.gif" alt="Happy" height="300px">
+            <img id="img2" src="2.gif" alt="Happy" height="300px">
+        </div>
+
+        <h1 id="txt">Do You Love Me</h1>
+        <div class="btnContainer">
+            <button id="yes"> Yes ! </button>
+            <button id="no" disabled> No </button>
+        </div>
+    </div>
+
+    <script>
+        const no = document.getElementById('no');
+        const yes = document.getElementById('yes');
+        const img1 = document.getElementById('img1');
+        const img2 = document.getElementById('img2');
+        const h1 = document.getElementById('txt');
+        no.addEventListener('mouseover', function () {
+            no.style.position = "absolute";
+            no.style.left = `${Math.ceil(Math.random() * 90)}%`;
+            no.style.top = `${Math.ceil(Math.random() * 90)}%`;
+        });
+        yes.addEventListener('click', function () {
+            img1.style.display = "none";
+            img2.style.display = "inline";
+            h1.innerHTML = "I Love You Too";
+        })
+
+    </script>
+
+</body>
+
+</html>
