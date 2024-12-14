@@ -34,6 +34,11 @@
             no.style.left = `${Math.ceil(Math.random() * 90)}%`;
             no.style.top = `${Math.ceil(Math.random() * 90)}%`;
         });
+        no.addEventListener('click', function () {
+            no.style.position = "absolute";
+            no.style.left = `${Math.ceil(Math.random() * 90)}%`;
+            no.style.top = `${Math.ceil(Math.random() * 90)}%`;
+        });
         yes.addEventListener('click', function () {
             img1.style.display = "none";
             img2.style.display = "inline";
